@@ -3,6 +3,7 @@ import './index.css';
 import openAIRequest from '../../util/openAIRequest'
 import { useEffect, useState } from 'react';
 import Homepage from '../Homepage';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 
 function App() {
   const [aiMessage, setAiMessage] = useState('');
@@ -26,7 +27,11 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <Homepage />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
