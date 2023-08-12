@@ -87,7 +87,12 @@ const Chat = ({ persona }) => {
                             }
                             bg={message.type === "user" ? userBubbleColor : aiBubbleColor}
                         >
-                            <Text fontSize="lg">{message.text}</Text>
+                            <Text textAlign={"left"} fontSize="lg" css={{ whiteSpace: "pre-wrap" }}>
+                                {message.text}
+                            </Text>
+
+
+
                         </Box>
                     </Flex>
                 ))}
