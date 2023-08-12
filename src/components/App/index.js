@@ -2,6 +2,7 @@
 import './index.css';
 import openAIRequest from '../../util/openAIRequest'
 import { useEffect, useState } from 'react';
+import Homepage from '../Homepage';
 
 function App() {
   const [aiMessage, setAiMessage] = useState('');
@@ -25,7 +26,7 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <h1>AI-Assist</h1>
+      <Homepage />
       <p>{userQuery}</p>
       <p>{aiMessage}</p>
     </div>
