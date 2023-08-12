@@ -9,10 +9,11 @@ import {
     useColorModeValue,
 } from "@chakra-ui/react";
 import openAIRequest from "../../util/openAIRequest";
-const Chat = () => {
+
+const Chat = ({ persona }) => {
     // Define some state variables for the user input and the messages
     const [userInput, setUserInput] = useState("");
-    const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useState([{ type: "ai", text: persona.introMessage },]);
 
     // Define a function to handle the user input change
     const handleChange = (e) => {
@@ -32,7 +33,7 @@ const Chat = () => {
             // Clear the user input
             setUserInput("");
             // Call the AI function to generate a response based on the user input
-            await aiResponse(userInput);
+            await aiResponse(persona.aiInstruction + userInput);
         }
     };
 
@@ -86,7 +87,12 @@ const Chat = () => {
                             }
                             bg={message.type === "user" ? userBubbleColor : aiBubbleColor}
                         >
-                            <Text fontSize="lg">{message.text}</Text>
+                            <Text textAlign={"left"} fontSize="lg" css={{ whiteSpace: "pre-wrap" }}>
+                                {message.text}
+                            </Text>
+
+
+
                         </Box>
                     </Flex>
                 ))}

@@ -46,7 +46,7 @@ const PersonaPage = () => {
                     </Stack>
                 </Box>
             </Flex>
-            <Chat />
+            <Chat persona={persona} />
         </Box>
         <Footer />
     </>
