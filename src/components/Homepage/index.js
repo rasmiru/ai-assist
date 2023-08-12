@@ -3,6 +3,7 @@ import Hero from "../Hero";
 import { Flex } from "@chakra-ui/layout";
 import PersonaCard from "../PersonaCard";
 import Footer from "../Footer";
+import { personaData } from "../../data/personaData";
 
 const Homepage = () => {
     return (
@@ -15,9 +16,9 @@ const Homepage = () => {
                 `
             } />
             <Flex justify="center" wrap="wrap" p={10}>
-                <PersonaCard image="images/persona1.png" name="Persona 1" />
-                <PersonaCard image="images/persona2.png" name="Persona 2" />
-                <PersonaCard image="images/persona3.png" name="Persona 3" />
+                {Object.values(personaData).map((persona) =>
+                    <PersonaCard key={persona.id} image={persona.image} id={persona.id} />)
+                }
             </Flex>
             <Footer />
         </>
