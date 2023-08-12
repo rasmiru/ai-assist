@@ -1,10 +1,9 @@
 import {
     Flex,
-    Link,
-    Button,
     Stack,
     Spacer,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
@@ -16,17 +15,17 @@ const Footer = () => {
             padding={6}
             bg="teal.500"
             color="white"
-            position="fixed"
-            bottom={0}
-            left={0}
-            right={0}
-            flex={1}
+        // position="fixed"
+        // bottom={0}
+        // left={0}
+        // right={0}
+        // flex={1}
         >
             <Stack direction="row" spacing={4} justifyContent='center'>
-                <Link href="#">About</Link>
-                <Link href="#">Contact</Link>
-                <Link href="#">Privacy</Link>
-                <Link href="#">Terms</Link>
+                <Link to={"#"}>About</Link>
+                <Link to={"#"}>Contact</Link>
+                <Link to={"#"}>Privacy</Link>
+                <Link to={"#"}>Terms</Link>
             </Stack>
             <Spacer />
         </Flex>
