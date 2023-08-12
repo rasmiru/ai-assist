@@ -1,6 +1,6 @@
 # AI Assist
 
-AI Assist is a React app that      lets you chat with different AI characters. They all have their own names, styles, and skills. They can help you with all kinds of things, like health, learning, cooking, finance, or fitness. 
+AI Assist is a React app that lets you chat with different AI characters. They all have their own names, styles, and skills. They can help you with all kinds of things, like health, learning, cooking, finance, or fitness. 
 
 
 ## Getting Started
