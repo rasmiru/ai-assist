@@ -15,9 +15,9 @@ const Homepage = () => {
                 `
             } />
             <Flex justify="center" wrap="wrap" p={10}>
-                <PersonaCard image="images/persona1.png" name="persona1" />
-                <PersonaCard image="images/persona2.png" name="persona2" />
-                <PersonaCard image="images/persona3.png" name="persona3" />
+                <PersonaCard image="images/persona1.png" name="Persona 1" />
+                <PersonaCard image="images/persona2.png" name="Persona 2" />
+                <PersonaCard image="images/persona3.png" name="Persona 3" />
             </Flex>
             <Footer />
         </>

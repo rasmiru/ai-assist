@@ -27,16 +27,9 @@ const Navbar = () => {
             <Spacer />
             {/* <Box display={{ base: "none", md: "flex" }} mt={{ base: 4, md: 0 }}> */}
             <Stack direction="row" spacing={4} justifyContent='center'>
-                <Link to={"#"} mr={6}>
+                <Link to={"/"} mr={6}>
                     Home
                 </Link>
-                <Link to={"#"} mr={6}>
-                    Persona 1
-                </Link>
-                <Link to={"#"} mr={6}>
-                    Persona 2
-                </Link>
-                <Link to={"#"}>Persona 3</Link>
             </Stack>
             {/* </Box> */}
         </Flex>
