@@ -12,7 +12,9 @@ import {
 import { personaData } from "../../data/personaData";
 import { useParams } from "react-router-dom";
 import NavBar from "../NavBar";
+import Chat from "../Chat";
 import Footer from "../Footer";
+
 const PersonaPage = () => {
     const { id } = useParams(); // Get the persona name from URL parameter
     const persona = personaData[id]; // Get persona details from data based on id
@@ -44,8 +46,9 @@ const PersonaPage = () => {
                     </Stack>
                 </Box>
             </Flex>
+            <Chat />
         </Box>
-        {/* <Footer /> */}
+        <Footer />
     </>
     );
 };

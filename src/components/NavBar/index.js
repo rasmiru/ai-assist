@@ -32,7 +32,6 @@ const Navbar = () => {
                     Home
                 </Link>
             </Stack>
-            {/* </Box> */}
         </Flex>
     );
 };
