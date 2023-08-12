@@ -7,13 +7,18 @@ import {
     Text,
     VStack,
     useColorModeValue,
+    Spinner,
 } from "@chakra-ui/react";
 import openAIRequest from "../../util/openAIRequest";
 
 const Chat = ({ persona }) => {
     // Define some state variables for the user input and the messages
     const [userInput, setUserInput] = useState("");
-    const [messages, setMessages] = useState([{ type: "ai", text: persona.introMessage },]);
+    const [messages, setMessages] = useState([
+        { type: "ai", text: persona.introMessage },
+    ]);
+    // Define a state variable for indicating loading state
+    const [isLoading, setIsLoading] = useState(false);
 
     // Define a function to handle the user input change
     const handleChange = (e) => {
@@ -32,6 +37,8 @@ const Chat = ({ persona }) => {
             ]);
             // Clear the user input
             setUserInput("");
+            // Set the loading state to true
+            setIsLoading(true);
             // Call the AI function to generate a response based on the user input
             await aiResponse(persona.aiInstruction + userInput);
         }
@@ -48,7 +55,15 @@ const Chat = ({ persona }) => {
             ]);
         } catch (error) {
             // Handle any errors here
-            console.error('Error fetching AI message:', error);
+            // Update the state with the AI message
+            setMessages((prevMessages) => [
+                ...prevMessages,
+                { type: "ai", text: `Error fetching AI response, please try again later.` },
+            ]);
+            console.error("Error fetching AI message:", error);
+        } finally {
+            // Set the loading state to false
+            setIsLoading(false);
         }
     };
 
@@ -90,12 +105,15 @@ const Chat = ({ persona }) => {
                             <Text textAlign={"left"} fontSize="lg" css={{ whiteSpace: "pre-wrap" }}>
                                 {message.text}
                             </Text>
-
-
-
                         </Box>
                     </Flex>
                 ))}
+                {/* Render the spinner component if the loading state is true */}
+                {isLoading && (
+                    <Flex justify="flex-start">
+                        <Spinner size="xl" color="teal.500" />
+                    </Flex>
+                )}
             </VStack>
             {/* Render a form with an input and a button for the user to write messages */}
             <form onSubmit={handleSubmit}>
@@ -116,4 +134,3 @@ const Chat = ({ persona }) => {
 };
 
 export default Chat;
-
