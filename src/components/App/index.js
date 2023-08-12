@@ -27,8 +27,6 @@ function App() {
   return (
     <div className="App">
       <Homepage />
-      <p>{userQuery}</p>
-      <p>{aiMessage}</p>
     </div>
   );
 }
