@@ -64,6 +64,9 @@ const Chat = () => {
                 spacing={4}
                 height="80vh"
                 overflowY="auto"
+                border="1px solid lightgray"
+                borderRadius={"5"}
+                padding={"5"}
             >
                 {/* Map over the messages array and render each message based on its type */}
                 {messages.map((message, index) => (

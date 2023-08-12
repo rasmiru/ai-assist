@@ -30,7 +30,7 @@ const PersonaPage = () => {
                     {persona.name}
                 </Heading>
                 <Text fontSize="2xl" fontWeight="bold" mb={4}>
-                    {persona.title}
+                    {persona.title.toUpperCase()}
                 </Text>
                 <Box maxW="lg">
                     <Stack direction="row" justifyContent={'center'} spacing={2} flexWrap="wrap">

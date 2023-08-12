@@ -19,7 +19,7 @@ const PersonaCard = ({ image, id }) => {
                             {personaData[id].name}
                         </Text>
                         <Text fontWeight="semibold" fontSize="sm">
-                            {personaData[id].title}
+                            {personaData[id].title.toUpperCase()}
                         </Text>
                     </Box>
                 </Box>
