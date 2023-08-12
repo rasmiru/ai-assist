@@ -55,7 +55,7 @@ const Chat = ({ persona }) => {
             ]);
         } catch (error) {
             // Handle any errors here
-            // Update the state with the AI message
+            // Update the state with the error message.
             setMessages((prevMessages) => [
                 ...prevMessages,
                 { type: "ai", text: `Error fetching AI response, please try again later.` },
