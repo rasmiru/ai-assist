@@ -23,17 +23,17 @@ const PersonaPage = () => {
         <NavBar />
         <Box p={10}>
             <Flex direction="column" alignItems="center">
-                <Box maxW="sm" mr={10}>
+                <Box maxW="sm" mb={4}>
                     <Image src={persona.image} alt={persona.name} />
                 </Box>
                 <Heading as="h1" size="xl" mb={2} textAlign="center">
                     {persona.name}
                 </Heading>
-                <Text fontSize="2xl" fontWeight="bold" mb={4}>
+                <Text fontSize="2xl" fontWeight="bold" mb={4} textAlign="center">
                     {persona.title.toUpperCase()}
                 </Text>
                 <Box maxW="lg">
-                    <Stack direction="row" justifyContent={'center'} spacing={2} flexWrap="wrap">
+                    <Stack direction="row" justifyContent="center" spacing={2} flexWrap="wrap">
                         {persona.skills.map((skill) => (
                             <Badge
                                 key={skill}
