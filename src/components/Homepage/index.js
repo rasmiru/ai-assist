@@ -12,7 +12,7 @@ const Homepage = () => {
             <Hero heading={"AI Assist"} text={
                 `AI Assist lets you chat with different AI characters. 
                 They all have their own names, styles, and skills. 
-                They can help you with all kinds of things, like health, learning, cooking, finance, or fitness.            
+                They can help you with all kinds of things, like health, career, cooking, tour planning, or fitness.            
                 `
             } />
             <Flex justify="center" wrap="wrap" p={10}>

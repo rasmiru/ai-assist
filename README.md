@@ -44,6 +44,16 @@ npm test
 
 This will launch the test runner in the interactive watch mode.
 
+## Production Build
+
+To create production build, use this command:
+
+```bash
+npm run build
+```
+
+Copy contents of `build` into S3 bucket or AWS Amplify for webhosting.
+
 ## Built With
 * React - A JavaScript library for building user interfaces
 * Chakra UI - A simple, modular and accessible component library for React

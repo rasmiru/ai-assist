@@ -10,7 +10,7 @@ const Hero = ({ heading, text }) => {
             <Heading as="h1" size="2xl" mb={4}>
                 {heading}
             </Heading>
-            <Text marginX={'auto'} width={'50%'} lineHeight={'10'} fontSize="xl">
+            <Text marginX={'auto'} width={'80%'} lineHeight={'10'} fontSize="xl">
                 {text}
             </Text>
         </Box>
