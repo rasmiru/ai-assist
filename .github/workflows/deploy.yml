@@ -12,9 +12,8 @@ jobs:
       - uses: actions/checkout@v2 # checkout the repo
       - uses: actions/setup-node@v2 # setup node environment
         with:
-          node-version: '18' # use node version 18
-      - name: Create .env.local file # add this step
-         run: echo "REACT_APP_OPEN_AI_API_KEY=${{ secrets.REACT_APP_OPEN_AI_API_KEY }}" > .env.local # create the file from the secret
+          node-version: '18' # use node version 18      
+      - run: echo "REACT_APP_OPEN_AI_API_KEY=${{ secrets.REACT_APP_OPEN_AI_API_KEY }}" > .env.local # create the file from the secret
       - run: npm install # install dependencies
       - run: npm run build # build the app
       - uses: jakejarvis/s3-sync-action@master # use s3-sync-action to sync the app to S3       
