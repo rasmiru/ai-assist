@@ -1,7 +1,7 @@
 
 import './index.css';
 import Homepage from '../Homepage';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import PersonaPage from '../PersonaPage';
 
 function App() {
