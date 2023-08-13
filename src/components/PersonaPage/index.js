@@ -4,7 +4,6 @@ import {
     Flex,
     Heading,
     Text,
-    Button,
     Image,
     Stack,
     Badge
