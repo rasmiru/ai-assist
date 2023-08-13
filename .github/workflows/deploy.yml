@@ -15,9 +15,7 @@ jobs:
           node-version: '18' # use node version 18
       - run: npm install # install dependencies
       - run: npm run build # build the app
-      - uses: jakejarvis/s3-sync-action@master # use s3-sync-action to sync the app to S3
-        with:
-          args: --acl public-read --follow-symlinks --delete # additional arguments for syncing
+      - uses: jakejarvis/s3-sync-action@master # use s3-sync-action to sync the app to S3       
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }} # S3 bucket name
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} 
