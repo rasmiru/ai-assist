@@ -18,13 +18,11 @@ const Navbar = () => {
             bg="teal.500"
             color="white"
         >
-            <Flex align="center" mr={5}>
-                <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-                    <Link to={"/"} mr={6}>
-                        AI Assist
-                    </Link>
-                </Heading>
-            </Flex>
+            <Heading as="h1" size="lg" letterSpacing={"tighter"}>
+                <Link to={"/"} mr={6}>
+                    AI Assist
+                </Link>
+            </Heading>
             <Spacer />
             <Stack direction="row" spacing={4} justifyContent='center'>
                 <Link to={"/"} mr={6}>
