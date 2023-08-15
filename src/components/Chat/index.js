@@ -33,7 +33,7 @@ const Chat = ({ persona }) => {
             // Add the user input to the messages array as an object with a type of "user"
             setMessages((prevMessages) => [
                 ...prevMessages,
-                { type: "user", text: userInput },
+                { type: "user", text: userInput.trim() },
             ]);
             // Clear the user input
             setUserInput("");
