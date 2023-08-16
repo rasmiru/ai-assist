@@ -1,6 +1,5 @@
 import React from "react";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render, screen, fireEvent } from "@testing-library/react";
 import Chat from ".";
 
 describe("Chat component", () => {
@@ -13,6 +12,18 @@ describe("Chat component", () => {
         render(<Chat persona={persona} />);
         const aiMessage = screen.getByText(persona.introMessage);
         expect(aiMessage).toBeInTheDocument();
+    });
+    it("allows user input and message sending", async () => {
+        render(<Chat persona={persona} />);
+
+        const input = screen.getByPlaceholderText("Type your message here...");
+        const sendButton = screen.getByText("Send");
+
+        input.value = "Hello, AI!";
+        fireEvent.change(input);
+
+        expect(input.value).toBe("Hello, AI!");
+
     });
 
 });
