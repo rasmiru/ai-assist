@@ -78,11 +78,12 @@ const Chat = ({ persona }) => {
             <VStack
                 align="stretch"
                 spacing={4}
-                height="80vh"
+                height="75vh"
                 overflowY="auto"
                 border="1px solid lightgray"
                 borderRadius={"5"}
                 padding={"5"}
+                tabIndex="0"
             >
                 {/* Map over the messages array and render each message based on its type */}
                 {messages.map((message, index) => (
@@ -118,13 +119,13 @@ const Chat = ({ persona }) => {
             {/* Render a form with an input and a button for the user to write messages */}
             <form onSubmit={handleSubmit}>
                 <Flex mt={4}>
-                    <Input
+                    <Input isDisabled={isLoading}
                         value={userInput}
                         onChange={handleChange}
                         placeholder="Type your message here..."
                         mr={2}
                     />
-                    <Button type="submit" colorScheme="teal">
+                    <Button type="submit" colorScheme="teal" isDisabled={userInput === "" || isLoading}>
                         Send
                     </Button>
                 </Flex>
