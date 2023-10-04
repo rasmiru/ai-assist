@@ -17,13 +17,13 @@ To run the app locally, follow these steps:
 1. Clone the repository from GitHub:
 
     ```bash
-    git clone https://github.com/rasmiru/final-project.git
+    git clone https://github.com/rasmiru/ai-assist.git
     ```
 
 2. Navigate to the project folder and install the dependencies:
 
     ```bash
-    cd final-project
+    cd ai-assist
     npm install
     ```
 
